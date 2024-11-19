@@ -3,8 +3,7 @@
   height: 120px;
   display: flex;
   color: #fff;
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin: 40px auto 30px;
 }
 .profile__image {
   border-radius: 50%;
@@ -85,15 +84,13 @@
     flex-direction: column;
     max-width: 282px;
   }
-  .profile__button_add {
-    margin: 0;
-  }
-  .profile__container_edit-button {
+
+  .profile__edit-button {
     width: 282px;
     justify-content: center;
   }
 
-  .profile__container-edit_icon {
+  .profile__icon {
     width: 18px;
     height: 18px;
     padding: 5.25px;
@@ -108,7 +105,8 @@
     margin-top: 0;
     margin-bottom: 36px;
   }
-  .profile__button_add {
+  .profile__button-add {
     width: 100%;
+    margin: 0;
   }
 }

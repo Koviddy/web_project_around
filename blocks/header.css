@@ -2,10 +2,11 @@
   flex-direction: column;
   color: #fff;
   max-width: 1280px;
+  margin: 0 auto;
 }
 
 .header__title {
-  margin-top: 45px;
+  margin: 45px auto 0;
   width: 173px;
 }
 
