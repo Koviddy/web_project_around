@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Projeto JavaScript" />
+    <meta name="author" content="Gustavo Ramos" />
+    <meta name="keywords" content="Projeto JS" />
+    <title>Documento JavaScript</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="fonts" href="./vendor/fonts.css" />
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img src="./images/around.png" alt="logotipo" class="header__title" />
+        <div class="header__line"></div>
+      </header>
+      <main class="content">
+        <section class="profile">
+          <img
+            src="./images/image__profile.jpg"
+            alt="Jacques Cousteau"
+            class="profile__image"
+          />
+          <div class="profile-info">
+            <div class="profile__content">
+              <div class="profile__edit-button">
+                <h2 class="profile__name">Jacques Cousteau</h2>
+                <img
+                  src="./images/Edit-Button.png"
+                  id="edit__Button"
+                  alt="icone de editar"
+                  class="profile__icon"
+                />
+              </div>
+              <p class="profile__function">Explorador</p>
+            </div>
+            <div class="profile__button-add">+</div>
+          </div>
+        </section>
+
+        <section class="card-grid">
+          <div class="card">
+            <img
+              src="./images/yosemite__lake.jpg"
+              alt="Vale de Yosemite"
+              class="card__image"
+            />
+            <div class="card-info">
+              <p class="card-title">Vale de Yosemite</p>
+              <img src="./images/heart.svg" alt="coração" class="card-heart" />
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./images/louise__lake.png"
+              alt="Lago Louise"
+              class="card__image"
+            />
+            <div class="card-info">
+              <p class="card-title">Lago Louise</p>
+              <img src="./images/heart.svg" alt="coração" class="card-heart" />
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./images/care__mountain.png"
+              alt="Montanhas Care..."
+              class="card__image"
+            />
+            <div class="card-info">
+              <p class="card-title">Montanhas Care...</p>
+              <img src="./images/heart.svg" alt="coração" class="card-heart" />
+            </div>
+          </div>
+          <div class="card">
+            <img src="./images/latemar.png" alt="Latemar" class="card__image" />
+            <div class="card-info">
+              <p class="card-title">Latemar</p>
+              <img src="./images/heart.svg" alt="coração" class="card-heart" />
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./images/national__park.png"
+              alt="Parque Nacional..."
+              class="card__image"
+            />
+            <div class="card-info">
+              <p class="card-title">Parque Nacional...</p>
+              <img src="./images/heart.svg" alt="coração" class="card-heart" />
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./images/braies__lake.png"
+              alt="Lago di Braies"
+              class="card__image"
+            />
+            <div class="card-info">
+              <p class="card-title">Lago di Braies</p>
+              <img src="./images/heart.svg" alt="coração" class="card-heart" />
+            </div>
+          </div>
+        </section>
+        <section id="profileModal" class="modal">
+          <form class="modal-content">
+            <img
+              src="./images/Close-Icon.png"
+              class="modal__close-button"
+              alt="close icon"
+            />
+            <h2 class="modal-text">Editar perfil</h2>
+            <fieldset id="profileForm" class="modal-form">
+              <input
+                type="text"
+                id="nameInput"
+                name="name"
+                class="modal-input modal-input_name"
+                placeholder="Jacques Cousteau"
+                required
+              />
+
+              <input
+                type="text"
+                id="jobInput"
+                name="job"
+                class="modal-input modal-input_job"
+                placeholder="Explorador"
+                required
+              />
+            </fieldset>
+            <button type="submit" class="modal-save-button">Salvar</button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">© 2024 Around The U.S.</p>
+      </footer>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
