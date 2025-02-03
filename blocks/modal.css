@@ -107,6 +107,7 @@
     font-size: 18px;
     line-height: 21.78px;
     width: 238px;
+    margin-top: 25px;
   }
   .modal-form {
     width: 238px;
@@ -120,5 +121,12 @@
   .modal-save-button {
     width: 238px;
     padding: 14px;
+    margin-bottom: 40px;
+  }
+  .modal__close-button {
+    width: 26px;
+    height: 26px;
+    top: -1px;
+    right: -160px;
   }
 }

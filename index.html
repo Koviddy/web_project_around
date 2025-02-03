@@ -37,74 +37,16 @@
               </div>
               <p class="profile__function">Explorador</p>
             </div>
-            <div class="profile__button-add">+</div>
+            <img
+              src="./images/Add Button.png"
+              alt="icone de adicionar"
+              class="profile__button-add"
+              id="add__Button"
+            />
           </div>
         </section>
 
-        <section class="card-grid">
-          <div class="card">
-            <img
-              src="./images/yosemite__lake.jpg"
-              alt="Vale de Yosemite"
-              class="card__image"
-            />
-            <div class="card-info">
-              <p class="card-title">Vale de Yosemite</p>
-              <img src="./images/heart.svg" alt="coração" class="card-heart" />
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="./images/louise__lake.png"
-              alt="Lago Louise"
-              class="card__image"
-            />
-            <div class="card-info">
-              <p class="card-title">Lago Louise</p>
-              <img src="./images/heart.svg" alt="coração" class="card-heart" />
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="./images/care__mountain.png"
-              alt="Montanhas Care..."
-              class="card__image"
-            />
-            <div class="card-info">
-              <p class="card-title">Montanhas Care...</p>
-              <img src="./images/heart.svg" alt="coração" class="card-heart" />
-            </div>
-          </div>
-          <div class="card">
-            <img src="./images/latemar.png" alt="Latemar" class="card__image" />
-            <div class="card-info">
-              <p class="card-title">Latemar</p>
-              <img src="./images/heart.svg" alt="coração" class="card-heart" />
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="./images/national__park.png"
-              alt="Parque Nacional..."
-              class="card__image"
-            />
-            <div class="card-info">
-              <p class="card-title">Parque Nacional...</p>
-              <img src="./images/heart.svg" alt="coração" class="card-heart" />
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="./images/braies__lake.png"
-              alt="Lago di Braies"
-              class="card__image"
-            />
-            <div class="card-info">
-              <p class="card-title">Lago di Braies</p>
-              <img src="./images/heart.svg" alt="coração" class="card-heart" />
-            </div>
-          </div>
-        </section>
+        <section class="card-grid"></section>
         <section id="profileModal" class="modal">
           <form class="modal-content">
             <img
@@ -135,6 +77,79 @@
             <button type="submit" class="modal-save-button">Salvar</button>
           </form>
         </section>
+        <section id="addModal" class="modal">
+          <form class="modal-content" id="addForm">
+            <img
+              src="./images/Close-Icon.png"
+              class="modal__close-button"
+              alt="close icon"
+            />
+            <h2 class="modal-text">Novo Local</h2>
+            <fieldset id="titleForm" class="modal-form modal-form_template">
+              <input
+                type="text"
+                id="titleInput"
+                name="title"
+                class="modal-input modal-input_name"
+                placeholder="Título"
+                required
+              />
+
+              <input
+                type="text"
+                id="linkInput"
+                name="link"
+                class="modal-input modal-input_job"
+                placeholder="Link da imagem"
+                required
+              />
+            </fieldset>
+            <button type="submit" class="modal-save-button">Criar</button>
+          </form>
+        </section>
+        <template class="card" id="card__template">
+          <div class="card__template">
+            <img
+              src="./images/Group.png"
+              alt="icone de lixeira"
+              class="card__bin card__bin-template"
+            />
+            <img
+              src=""
+              alt="Lago di Braies"
+              class="card__image card__image_template"
+            />
+            <div class="card-info card-info_template">
+              <p class="card-title card-title_template"></p>
+              <img
+                src="./images/heart.svg"
+                alt="coração"
+                class="card-heart card-heart_template"
+              />
+            </div>
+          </div>
+        </template>
+        <template id="zoom__Template">
+          <div class="zoom__Template_card">
+            <div class="zoom__Content">
+              <img
+                src="./images/Close-Icon.png"
+                class="zoom__Template_close"
+                alt="close icon"
+                id="closeImage"
+              />
+              <div class="zoom__text-content">
+                <img
+                  src=""
+                  alt="foto ampliada"
+                  class="zoom__pic"
+                  id="picture__pic"
+                />
+                <p class="zoom__text"></p>
+              </div>
+            </div>
+          </div>
+        </template>
       </main>
 
       <footer class="footer">
