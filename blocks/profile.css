@@ -64,6 +64,49 @@
   cursor: pointer;
   opacity: 0.6;
 }
+
+@media screen and (max-width: 1024px) {
+  .profile {
+    margin: 50px 50px 36px;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    flex-direction: column;
+    height: 320px;
+  }
+
+  .profile__content {
+    max-width: 100%;
+  }
+  .profile-info {
+    margin: 0;
+    flex-direction: column;
+    max-width: 282px;
+  }
+  .profile__edit-button {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .profile__name {
+    font-size: 24px;
+  }
+  .profile__icon {
+    padding: 5.25px;
+  }
+  .profile__function {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 36px;
+  }
+  .profile__button-add {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
 @media screen and (max-width: 544px) {
   .profile {
     width: 282px;
@@ -87,7 +130,6 @@
     width: 282px;
     justify-content: center;
   }
-
   .profile__icon {
     width: 18px;
     height: 18px;

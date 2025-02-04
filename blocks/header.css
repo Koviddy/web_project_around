@@ -16,6 +16,18 @@
   margin: 41px auto 0;
 }
 
+@media screen and (max-width: 1024px) {
+  .header {
+    max-width: 100%;
+  }
+  .header__line {
+    max-width: 100%;
+  }
+  .header__title {
+    margin-left: 30px;
+  }
+}
+
 @media screen and (max-width: 544px) {
   .header {
     max-width: 100%;
