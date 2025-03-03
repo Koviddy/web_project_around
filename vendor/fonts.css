@@ -1,13 +1,15 @@
 @font-face {
   font-family: "Inter";
-  font-weight: 400;
   font-style: normal;
-  src: url(./fonts/Inter-VariableFont_opsz\wght.ttf) format(truetype);
+  font-weight: 400;
+  font-display: swap;
+  src: url(./fonts/Inter-4.0/web/InterDisplay-Regular.woff2);
 }
 
 @font-face {
   font-family: "Inter";
-  font-weight: 900;
   font-style: normal;
-  src: url(./fonts/Inter-VariableFont_opsz\wght.ttf) format(truetype);
+  font-weight: 900;
+  font-display: swap;
+  src: url(./fonts/Inter-4.0/web/InterDisplay-Black.woff2);
 }

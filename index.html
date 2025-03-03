@@ -1,161 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Projeto JavaScript" />
-    <meta name="author" content="Gustavo Ramos" />
-    <meta name="keywords" content="Projeto JS" />
-    <title>Documento JavaScript</title>
-    <link rel="shortcut icon" href="./favicon.ico" />
-    <link rel="fonts" href="./vendor/fonts.css" />
-    <link rel="stylesheet" href="./pages/index.css" />
-  </head>
-  <body>
-    <div class="page">
-      <header class="header">
-        <img src="./images/around.png" alt="logotipo" class="header__title" />
-        <div class="header__line"></div>
-      </header>
-      <main class="content">
-        <section class="profile">
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Arthur Michel" />
+  <meta name="description" content="Travel site" />
+  <meta name="keywords" content="Explore, US, Mountain"/>
+  <link rel="stylesheet" href="pages/index.css">
+  <link rel="shortcut icon" href="./favicon.svg"/>
+  <link rel="preconnect" href="./vendor/fonts/Inter-4.0/">
+  <title>Around The U.S.</title>
+</head>
+<body>
+  <div class="page">
+<!--LOGO-->
+<header class="header">
+  <img
+  src="favicon.svg"
+  alt="logo around the us"
+  class="header__logo">
+  </header>
+    <main class="content">
+<!--AREA DO PERFIL-->
+      <section class="profile">
+        <img
+        src="./images/perfil_image.png"
+        alt="imagem de um idoso"
+        class="profile__image">
+        <div class="profile__intro">
+          <div class="profile__container">
+            <h1 class="profile__name"> Jacques Cousteau </h1>
+            <button type="button" class="profile__edit-button">
+              <img
+              src="./images/edit__vector.svg"
+              alt="icone de editar algo, uma caneta">
+            </button>
+          </div>
+          <p class="profile__area"> Explorar </p>
+        </div>
+        <button type="button" class="profile__add-button">
           <img
-            src="./images/image__profile.jpg"
-            alt="Jacques Cousteau"
-            class="profile__image"
-          />
-          <div class="profile-info">
-            <div class="profile__content">
-              <div class="profile__edit-button">
-                <h2 class="profile__name">Jacques Cousteau</h2>
-                <img
-                  src="./images/Edit-Button.png"
-                  id="edit__Button"
-                  alt="icone de editar"
-                  class="profile__icon"
-                />
-              </div>
-              <p class="profile__function">Explorador</p>
-            </div>
+          src="./images/add__button.svg"
+          alt="símbolo de adição">
+        </button>
+      </section>
+      <!--EDIÇÃO DE PERFIL-->
+      <section class="popup" id="editProfilePopup">
+        <div class="popup__content">
+        <button class="popup__close-button" type="button" id="closePopupButton">
+          <img
+          src="./images/CloseIcon.svg"
+          alt="simbolo de X, fechar"
+          class="popup__close-icon">
+        </button>
+        <form class="popup__form">
+          <fieldset class="popup__fieldset">
+            <h3 class="popup__title"> Editar Perfil </h3>
+            <input
+            type="text"
+            class="popup__input"
+            id="name"
+            placeholder="Nome"
+            autocomplete="name"
+            minlength="2"
+            maxlength="40"
+            required>
+            <span class="popup__error" id="name-error"></span>
+            <input
+            type="text"
+            class="popup__input"
+            id="area"
+            placeholder="Sobre mim"
+            minlength="2"
+            maxlength="200"
+            required>
+            <span class="popup__error" id="about-error"></span>
+          </fieldset>
+          <button class="popup__button" type="submit">
+            Salvar
+          </button>
+        </form>
+      </div>
+      </section>
+      <!--ADIÇÃO DE LOCAL-->
+      <section class="popup" id="addPostPopup">
+        <div class="popup__content">
+          <button class="popup__close-button" type="button" id="CloseAddPopup">
             <img
-              src="./images/Add Button.png"
-              alt="icone de adicionar"
-              class="profile__button-add"
-              id="add__Button"
-            />
-          </div>
-        </section>
-
-        <section class="card-grid"></section>
-        <section id="profileModal" class="modal">
-          <form class="modal-content">
-            <img
-              src="./images/Close-Icon.png"
-              class="modal__close-button"
-              alt="close icon"
-            />
-            <h2 class="modal-text">Editar perfil</h2>
-            <fieldset id="profileForm" class="modal-form">
+            src="./images/CloseIcon.svg"
+            alt="simbolo de X, fechar"
+            class="popup__close-icon">
+          </button>
+          <form class="popup__form" id="AddPostForm">
+            <fieldset class="popup__fieldset">
+              <h3 class="popup__title"> Novo Local </h3>
               <input
-                type="text"
-                id="nameInput"
-                name="name"
-                class="modal-input modal-input_name"
-                placeholder="Jacques Cousteau"
-                required
-              />
-
+              type="text"
+              class="popup__input"
+              id="title"
+              placeholder="Título"
+              minlength="2"
+              maxlength="30"
+              required>
+              <span class="popup__error" id="title-error"></span>
               <input
-                type="text"
-                id="jobInput"
-                name="job"
-                class="modal-input modal-input_job"
-                placeholder="Explorador"
-                required
-              />
+              type="url"
+              class="popup__input"
+              id="image-link"
+              placeholder="Link de imagem"
+              required>
+              <span class="popup__error" id="image-link-error"></span>
             </fieldset>
-            <button type="submit" class="modal-save-button">Salvar</button>
+            <button class="popup__button" type="submit">
+              Criar
+            </button>
           </form>
-        </section>
-        <section id="addModal" class="modal">
-          <form class="modal-content" id="addForm">
+        </div>
+      </section>
+      <!--AMPLIAÇÃO DE IMAGEM-->
+      <section class="popup" id="PopupImage">
+        <div class="popup__content-image">
+          <button class="popup__type-close" id="CloseImagePopup">
             <img
-              src="./images/Close-Icon.png"
-              class="modal__close-button"
-              alt="close icon"
+              class="popup__icon popup__icon-close"
+              src="images/CloseIcon.svg"
+              alt="simbolo de X, fechar"
             />
-            <h2 class="modal-text">Novo Local</h2>
-            <fieldset id="titleForm" class="modal-form modal-form_template">
-              <input
-                type="text"
-                id="titleInput"
-                name="title"
-                class="modal-input modal-input_name"
-                placeholder="Título"
-                required
-              />
-
-              <input
-                type="text"
-                id="linkInput"
-                name="link"
-                class="modal-input modal-input_job"
-                placeholder="Link da imagem"
-                required
-              />
-            </fieldset>
-            <button type="submit" class="modal-save-button">Criar</button>
-          </form>
-        </section>
-        <template class="card" id="card__template">
-          <div class="card__template">
-            <img
-              src="./images/Group.png"
-              alt="icone de lixeira"
-              class="card__bin card__bin-template"
-            />
-            <img
-              src=""
-              alt="Lago di Braies"
-              class="card__image card__image_template"
-            />
-            <div class="card-info card-info_template">
-              <p class="card-title card-title_template"></p>
+          </button>
+          <img alt="imagem ampliada" class="popup__image"/>
+          <p class="popup__paragraph"></p>
+        </div>
+      </section>
+<!--AREA DAS IMAGENS-->
+      <section class="elements">
+        <template id="elements-template">
+          <div class="element">
+            <button
+            class="element__button element__button_trash"
+            type="button">
               <img
+                src="images/Trash.svg"
+                alt="icone de lixeira"
+                class="element__icon-trash"
+              />
+            </button>
+            <img class="element__image">
+            <div class="element__container">
+              <h2 class="element__text"></h2>
+              <button
+              class="element__button"
+              type="button">
+                <img
+                class="element__icon"
                 src="./images/heart.svg"
-                alt="coração"
-                class="card-heart card-heart_template"
-              />
+                alt="icone de coração">
+              </button>
             </div>
           </div>
         </template>
-        <template id="zoom__Template">
-          <div class="zoom__Template_card">
-            <div class="zoom__Content">
-              <img
-                src="./images/Close-Icon.png"
-                class="zoom__Template_close"
-                alt="close icon"
-                id="closeImage"
-              />
-              <div class="zoom__text-content">
-                <img
-                  src=""
-                  alt="foto ampliada"
-                  class="zoom__pic"
-                  id="picture__pic"
-                />
-                <p class="zoom__text"></p>
-              </div>
-            </div>
-          </div>
-        </template>
-      </main>
-
-      <footer class="footer">
-        <p class="footer__text">© 2024 Around The U.S.</p>
-      </footer>
-    </div>
-    <script src="./scripts/index.js"></script>
-  </body>
+      </section>
+    </main>
+<!--RODAPÉ-->
+    <footer class="footer">
+      <p class="footer__copyright"> &#169; 2024 Arthur Michel S F </p>
+    </footer>
+  </div>
+  <script src="./script/index.js"></script>
+  <script src="./script/validate.js"></script>
+</body>
 </html>
