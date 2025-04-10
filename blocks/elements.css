@@ -1,100 +1,103 @@
-.elements {
-  margin: 40px auto 67px;
-  max-width: 880px;
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(2, auto);
-  justify-content: center;
-  column-gap: 17px;
+.elements{
+    max-width: 880px;
+    margin: 0 auto;
+    margin-top: 46px;
+}
+ .elements__card {
+ margin: 0;
+ list-style: none;
+ padding: 0;
+ border-radius: 10px;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ row-gap: 20px;
+ column-gap: 17px; 
+} 
+.elements__li {
+    max-width: 282px;
+    list-style: none;
+    position: relative;
+}
+.elements__card-img {
+    display: block;
+    margin: 0;
+    width: 282px;
+    height: 282px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
 }
 
-.element {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  max-width: 282px;
+.elements__card-text {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+ margin: 0;
+ padding: 20px 15px;
+ background-color: white;
+ color: black;
+ border-radius: 0 0 10px 10px;
+ 
 }
 
-.element__image {
-  width: 282px;
-  height: 282px;
-  cursor: pointer;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+.elements__card-name {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 900;
+}
+.elements__like {
+    margin: 0;
 }
 
-.element__container {
-  background-color: #fff;
-  color: #000;
-  margin: 0;
-  max-width: 282px;
-  max-height: 79px;
-  display: flex;
-  justify-content: space-between;
-  padding: 25px 15px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+
+.elements__button-like {
+    background-image: url(../images/heart-icon.png);
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    width: 21px;
+    height: 19px;
+    opacity: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.elements__button-like:hover {
+   opacity: 60%;
+}
+.elements__button-like_click {
+    background-image: url(../images/heart-full-icon.png);
 }
 
-.element__text {
-  color: #000000;
-  font-family: "Inter", "sans-serif";
-  font-size: 24px;
-  font-weight: 900;
-  line-height: 29.05px;
-  text-align: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+.elements__trash {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    opacity: 100%;
+}
+.elements__trash:hover{
+    opacity: 60%;
+    transition: 0.2s;
 }
 
-.element__button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.element__rectangle {
-  max-width: 282px;
-  max-height: 361px;
-}
-
-.element__icon {
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.element__icon-trash {
-  position: relative;
-  top: 35px;
-  left: 125px;
-}
-
-.elements__icon-active {
-  opacity: 1;
-  background-image: url("../images/Union.svg");
-}
-
-.element__icon-trash:hover {
-  opacity: 60%;
-}
-
-.element__icon:hover {
-  opacity: 50%;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .elements {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(3, auto);
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .elements {
-    display: grid;
-    grid-template-columns: repeat(1, auto);
-  }
-}
+ @media screen and (max-width: 970px){
+    .elements {
+        max-width: 600px;
+    }
+    .elements__card {
+        
+        grid-template-columns: auto;
+        place-content: center;
+        }
+ 
+    }
