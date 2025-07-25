@@ -1,8 +1,15 @@
+import { api } from "./Api.js";
+
 export default class Section {
   constructor({ items, renderer }, containerSelector) {
     this._items = items;
     this._renderer = renderer;
     this._container = document.querySelector(containerSelector);
+
+    api.getInitialCards().then((cards) => {
+      this._items = cards;
+      this.render();
+    });
   }
 
   addItem(element) {

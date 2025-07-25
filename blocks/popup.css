@@ -112,6 +112,9 @@
     font-weight: 400;
     border: 0;
 }
+.popup__button-submit-no-margin { 
+    margin-top: 0;
+}
 .popup__button-submit:hover {
    opacity: 80%;
 }

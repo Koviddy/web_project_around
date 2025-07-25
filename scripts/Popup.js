@@ -18,7 +18,6 @@ export default class Popup {
   };
 
   setEventListeners() {
-    console.log(this._popupElement);
     this._popupElement
       .querySelector(".popup__close-icon-img")
       .addEventListener("click", this.close);

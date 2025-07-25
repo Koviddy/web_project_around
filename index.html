@@ -17,14 +17,27 @@
       </header>
       <section class="profile">
         <div class="profile__view">
-          <img
+          <!-- <img
             class="profile__img"
             src="./images/profile-img.jpg"
             alt="Foto de perfil do usuário"
-          />
+          /> -->
+          <div class="profile__avatar-container">
+            <img
+              class="profile__img"
+              src="./images/profile-img.jpg"
+              alt="Foto de perfil do usuário"
+            />
+            <div class="profile__avatar-overlay"></div>
+            <img
+              class="profile__avatar-pencil"
+              src="./images/pencil-icon.png"
+              alt="Editar avatar"
+            />
+          </div>
           <div class="profile__description">
-            <h2 class="profile__name">Jacques Cousteau</h2>
-            <h2 class="profile__job">Explorar</h2>
+            <h2 class="profile__name"></h2>
+            <h2 class="profile__job"></h2>
             <button type="button" class="profile__edit-button">
               <img
                 class="profile__edit-button-img"
@@ -107,7 +120,7 @@
         </div>
       </section>
       <section class="popup popup-add">
-        <div class="popup__container"  id="cards-form">
+        <div class="popup__container" id="cards-form">
           <button type="button" class="popup__close-icon">
             <img
               class="popup__close-icon-img popup__close"
@@ -138,6 +151,7 @@
                   type="url"
                   class="popup__form-input popup__form-input_link"
                   name="image"
+                  required
                 />
                 <span class="url-input-error"></span>
               </label>
@@ -163,6 +177,56 @@
         <h2 class="footer__copyright">&copy; 2023 Around The U.S.</h2>
       </footer>
     </section>
+
+    <section class="popup popup-delete">
+      <div class="popup__container">
+        <button type="button" class="popup__close-icon">
+          <img
+            class="popup__close-icon-img"
+            src="./images/close-icon.png"
+            alt="Fechar"
+          />
+        </button>
+        <form class="popup__form popup__form_delete" novalidate>
+          <fieldset class="popup__set">
+            <h2 class="popup__title">Tem certeza?</h2>
+            <button type="submit" class="popup__button-submit popup__button-submit-no-margin">Sim</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <!-- Avatar Update Popup -->
+    <section class="popup popup-avatar">
+      <div class="popup__container">
+        <button type="button" class="popup__close-icon">
+          <img
+            class="popup__close-icon-img"
+            src="./images/close-icon.png"
+            alt="Fechar"
+          />
+        </button>
+        <form class="popup__form popup__form_avatar" novalidate>
+          <fieldset class="popup__set">
+            <h2 class="popup__title">Atualizar a foto do perfil</h2>
+            <label>
+              <input
+                id="avatar-url-input"
+                placeholder="Link da nova foto"
+                type="url"
+                class="popup__form-input popup__form-input_avatar"
+                name="avatar"
+                required
+              />
+              <span class="avatar-url-input-error"></span>
+            </label>
+            <button type="submit" class="popup__button-submit">Salvar</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <script type="module" src="./scripts/Api.js"></script>
     <script type="module" src="./scripts/index.js"></script>
     <script type="module" src="./scripts/utils.js"></script>
   </body>

@@ -1,43 +1,29 @@
 import Popup from "./Popup.js";
 
-export default class PopupWithForm extends Popup {
-  constructor({popupSelector, submitCallback}) {
+export default class PopupWithDelete extends Popup {
+  constructor({ popupSelector, submitCallback }) {
     super(popupSelector);
     this._popupElement = document.querySelector(popupSelector);
-    this._submitCallback = submitCallback;   
-    this._formElement =  this._popupElement.querySelector(".popup__form");
+    this._formElement = this._popupElement.querySelector(".popup__form_delete");
     this._submitButton = this._formElement.querySelector(".popup__button-submit");
     this._defaultButtonText = this._submitButton.textContent;
+    this._submitCallback = submitCallback;
   }
 
-
-  _getInputValues() {
-    const inputs = this._formElement.querySelectorAll(".popup__form-input");
-
-    const values = {};
-
-    inputs.forEach((input) => {
-      values[input.name] = input.value;
-    });
-
-    return values;
+  open(cardElement, cardId) {
+    this._cardElement = cardElement;
+    this._cardId = cardId;
+    super.open();
   }
 
-  setInputValues(values) {
-    const inputs = this._formElement.querySelectorAll(".popup__form-input");
-    inputs.forEach((input) => {
-      input.value = values[input.name];
-    });
-  }
-  
   setEventListeners() {
     super.setEventListeners();
-
     this._formElement.addEventListener("submit", (evt) => {
       evt.preventDefault();
       this._renderSaving(true);
       this._submitCallback(
-        this._getInputValues(),
+        this._cardElement,
+        this._cardId,
         () => {
           this._renderSaving(false);
           this.close();
@@ -52,7 +38,6 @@ export default class PopupWithForm extends Popup {
 
   close() {
     super.close();
-    this._formElement.reset();
     this._renderSaving(false);
   }
 }
